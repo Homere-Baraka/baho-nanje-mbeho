@@ -1,1071 +1,863 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="description"
-    content="BAHO NANJE MBEHO - Une organisation humanitaire dédiée à l'amélioration des conditions de vie des enfants vulnérables."
-  />
-  <meta
-    name="keywords"
-    content="charity, donation, children, education, inclusion, humanitarian aid, community service, child welfare"
-  />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="BAHO NANJE MBEHO - A humanitarian organization dedicated to improving the lives of vulnerable children through education, inclusion, and care." />
+  <meta name="keywords" content="BAHO NANJE MBEHO, charity, donation, children, education, inclusion, humanitarian aid, community service, child welfare, Burundi, vulnerable children, psychosocial support" />
   <meta name="author" content="BAHO NANJE MBEHO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bahonanjembeho.com" />
 
-  <!-- Open Graph Meta Tags for social sharing -->
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "BAHO NANJE MBEHO",
+    "alternateName": "Children's Life Matters",
+    "url": "https://www.bahonanjembeho.com",
+    "logo": "https://www.bahonanjembeho.com/assets/image/logo.png",
+    "description": "A humanitarian organization dedicated to improving the lives of vulnerable children through education, inclusion, and care.",
+    "foundingLocation": "Burundi",
+    "sameAs": [
+      "https://www.facebook.com/bahonanjembeho",
+      "https://www.twitter.com/bahonanjembeho"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+257-69-46-78-70",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="BAHO NANJE MBEHO - Children's Life Matters" />
-  <meta
-    property="og:description"
-    content="Une organisation humanitaire dédiée à l'amélioration des conditions de vie des enfants vulnérables."
-  />
-  <meta property="og:image" content="/api/placeholder/1200/630" />
+  <meta property="og:description" content="A humanitarian organization dedicated to improving the lives of vulnerable children through education, inclusion, and care." />
+  <meta property="og:image" content="https://www.bahonanjembeho.com/assets/image/logo.png" />
   <meta property="og:url" content="https://www.bahonanjembeho.com" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="BAHO NANJE MBEHO - Children's Life Matters" />
-  <meta
-    name="twitter:description"
-    content="Une organisation humanitaire dédiée à l'amélioration des conditions de vie des enfants vulnérables."
-  />
-  <meta name="twitter:image" content="/api/placeholder/1200/630" />
+  <meta name="twitter:description" content="A humanitarian organization dedicated to improving the lives of vulnerable children." />
+  <meta name="twitter:image" content="https://www.bahonanjembeho.com/assets/image/logo.png" />
 
-  <!-- Canonical URL -->
-  <meta rel="canonical" href="https://www.bahonanjembeho.com" />
+  <title>BAHO NANJE MBEHO - Children's Life Matters | Humanitarian Organization</title>
 
-  <!-- Robots Meta Tag -->
-  <meta name="robots" content="index, follow" />
-  <title>BAHO NANJE MBEHO - Children's Life Matters</title>
+  <link rel="icon" type="image/x-icon" href="./assets/image/logo.png">
   
-    <link rel="stylesheet" href="assets/css/tailwind.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
-      integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-  </head>
-
-  <body class="font-body">
-    <!-- home section -->
-    <section class="bg-white py-10 md:mb-10">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <nav class="flex-wrap lg:flex items-center " x-data="{navbarOpen:false}">
-          <div class="flex items-center mb-10 lg:mb-0">
-            <img src="assets/image/logo.jpeg" alt="Logo" class="w-20 h-20" />
-
-            <button
-              class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md"
-              @click="navbarOpen = !navbarOpen"
-            >
-              <i data-feather="menu"></i>
-            </button>
-          </div>
-
-          <ul
-            class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14"
-            :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
-          >
-            <li
-              class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            >
-              <a href="#">Home</a>
-            </li>
-            <li
-              class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            >
-              <a href="#">About us</a>
-            </li>
-            <li
-              class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            >
-              <a href="#">Mission</a>
-            </li>
-            <li
-              class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0"
-            >
-              <a href="#">Objectives</a>
-            </li>
-          </ul>
-
-          <div
-            class="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6"
-            :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
-          >
-            <a
-              href="#"
-              class="px-6 py-4 bg-blue-500 text-white font-semibold text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500 mb-5 md:mb-0"
-              >Join</a
-            >
-
-            <a
-              href="#"
-              class="px-6 py-4 border-2 border-blue-500 text-blue-500 font-semibold text-lg rounded-xl hover:bg-blue-700 hover:text-white transition ease-linear duration-500"
-              >Become a member</a
-            >
-          </div>
-        </nav>
-
-        <div class="flex flex-col lg:flex-row justify-between space-x-20">
-          <div class="text-center lg:text-left mt-40">
-             <h1
-              class="font-semibold text-gray-900 text-3xl md:text-6xl leading-normal mb-6"
-              id="hero-title"
-            >
-              Children's Life <br />
-              Matters
-            </h1>
-
-            <p
-              class="font-light text-gray-400 text-md md:text-lg leading-normal mb-12"
-              id="hero-description"
-            >
-              We are dedicated to improving the lives of vulnerable <br />
-              children through education, protection, and care
-            </p>
-
-            <button
-              class="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-green-700 transition ease-in-out duration-500"
-              id="get-started-btn"
-            >
-              Get started
-            </button>
-          </div>
-
-          <div class="mt-24">
-            <img src="assets/image/home-img.png" alt="Image" />
-          </div>
-        </div>
-      </div>
-      <!-- container.// -->
-    </section>
-    <!-- home section //end -->
-
-    <!-- feature section -->
-    <section class="bg-white py-16 md:mt-10">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <p
-          class="font-light text-gray-500 text-lg md:text-xl text-center uppercase mb-6"
-        >
-        About Us
-        </p>
-
-        <h1
-          class="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-10"
-        >
-        We believe we can make a difference  <br />
-        in children's lives
-        </h1>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
-          <div class="text-center">
-            <div class="flex justify-center mb-6">
-              <div
-                class="w-20 py-6 flex justify-center bg-blue-200 bg-opacity-30 text-blue-700 rounded-xl"
-              >
-                <i data-feather="globe"></i>
-              </div>
-            </div>
-
-            <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
-              Education
-            </h4>
-
-            <p class="font-light text-gray-500 text-md md:text-xl mb-6">
-              We provide access to quality education for every child regardless of background
-            </p>
-
-            <div class="flex justify-center">
-              <a
-                href="#"
-                class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500"
-              >
-                Learn more
-                <i data-feather="chevron-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <div class="flex justify-center mb-6">
-              <div
-                class="w-20 py-6 flex justify-center bg-blue-200 bg-opacity-30 text-blue-700 rounded-xl"
-              >
-                <i data-feather="arrow-up-right"></i>
-              </div>
-            </div>
-
-            <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
-              Inclusion
-            </h4>
-
-            <p class="font-light text-gray-500 text-md md:text-xl mb-6">
-              We promote social inclusion and create opportunities for all children
-            </p>
-
-            <div class="flex justify-center">
-              <a
-                href="#"
-                class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500"
-              >
-                Learn more
-                <i data-feather="chevron-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <div class="flex justify-center mb-6">
-              <div
-                class="w-20 py-6 flex justify-center bg-blue-200 bg-opacity-30 text-blue-700 rounded-xl"
-              >
-                <i data-feather="clock"></i>
-              </div>
-            </div>
-
-            <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
-              Well-being
-            </h4>
-
-            <p class="font-light text-gray-500 text-md md:text-xl mb-6">
-              We provide psychosocial support and ensure physical health for all children
-            </p>
-
-            <div class="flex justify-center">
-              <a
-                href="#"
-                class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500"
-              >
-                Learn more
-                <i data-feather="chevron-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- container.// -->
-    </section>
-    <!-- feature section //end -->
-
-      <!-- Mission section -->
-      <section class="bg-white py-16" id="mission">
-        <div class="container max-w-screen-xl mx-auto px-4">
-          <h1
-            class="font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16"
-            id="mission-heading"
-          >
-            Our Vision & Mission
-          </h1>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-              <div class="flex justify-center mb-6">
-                <div
-                  class="w-20 py-6 flex justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                >
-                  <i data-feather="eye"></i>
-                </div>
-              </div>
+  <!-- Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
-              <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6 text-center" id="vision-title">
-                Our Vision
-              </h4>
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   
-              <p
-                class="font-light text-gray-500 text-md md:text-lg mb-10 text-center"
-                id="vision-text"
-              >
-                "A future where every child, regardless of their background, has access to quality education, opportunities for social inclusion, and a nurturing environment to grow, flourish, and succeed."
-              </p>
-            </div>
-  
-            <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-              <div class="flex justify-center mb-6">
-                <div
-                  class="w-20 py-6 flex justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                >
-                  <i data-feather="target"></i>
-                </div>
-              </div>
-  
-              <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6 text-center" id="mission-title">
-                Our Mission
-              </h4>
-  
-              <p
-                class="font-light text-gray-500 text-md md:text-lg mb-10 text-center"
-                id="mission-text"
-              >
-                "To provide vulnerable children with support through education, social inclusion, psychosocial well-being, and health, in order to give them the necessary tools to build a better future. We are committed to working with love, dignity, and respect for each child, fostering development opportunities through targeted programs and a nurturing environment."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Objectives section -->
-      <section class="bg-white py-16" id="objectives">
-        <div class="container max-w-screen-xl mx-auto px-4">
-          <div class="flex flex-col lg:flex-row justify-between space-x-0 lg:space-x-16">
-            <div class="flex justify-center lg:justify-start">
-              <img src="assets/image/feature-img.png" class="w-full " alt="Children in school" />
-            </div>
-  
-            <div class="mt-16">
-              <h1 class="font-semibold text-gray-900 text-xl md:text-4xl mb-10" id="objectives-heading">
-                Our Objectives
-              </h1>
-              
-              <div class="grid grid-cols-1 mb-8">
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="book"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-1">
-                      Ensure access to education
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="users"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-2">
-                      Promote social inclusion
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="smile"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-3">
-                      Provide psychosocial and emotional support
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="heart"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-4">
-                      Guarantee physical well-being and health of children
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="home"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-5">
-                      Strengthen community partnerships
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="user-check"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-6">
-                      Offer mentoring and personal development opportunities
-                    </h3>
-                  </div>
-                </div>
-                
-                <div class="mb-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-5 text-primary rounded-xl"
-                    >
-                      <i data-feather="award"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-900 text-lg" id="obj-7">
-                      Support family and community empowerment
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dodger-blue': '#1cabf0',
+            'boston-blue': '#309ac2',
+            'pelorous': '#479ec1',
+            'curious-blue': '#25a6d9',
+            'jelly-bean': '#2984b5',
+            'picton-blue': '#36c6f6',
+            'cerulean': '#04acec',
+            primary: '#1cabf0',
+            info: '#309ac2',
+          },
+          fontFamily: {
+            'body': ['Poppins', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-in-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'slide-right': 'slideRight 0.8s ease-out',
+            'bounce-slow': 'bounce 3s infinite',
+            'pulse-slow': 'pulse 4s infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(50px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideRight: {
+              '0%': { transform: 'translateX(-50px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- donation section -->
-    <section class="bg-white py-16">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <h1
-          class="font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16"
-        >
-          Latest to donate
-        </h1>
+  <style>
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #1cabf0 0%, #2984b5 100%);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(45deg, #1cabf0, #309ac2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-1.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
 
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Help flood victims in <br />
-              Indonesia
-            </h4>
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .animate-on-scroll.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Help flood victims in Indonesia by <br />
-              donating sincerely, regardless of the...
-            </p>
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    
+    .volunteer-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/image/aide.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
 
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$25000</span
-                >
-              </h6>
+<body class="font-body">
+  <!-- Home section -->
+  <section class="bg-white py-10 md:mb-10">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <nav class="flex-wrap lg:flex  items-center fixed top-0 left-0 right-0 glass-effect bg-primary/15 lg:py-3 py-1 px-4 container mx-auto px-6 w-full border-gray-200 z-50" x-data="{navbarOpen:false}">
+        <div class="flex items-center mb-10 lg:mb-0">
+          <img src="./assets/image/logo.png" alt="BAHO NANJE MBEHO Logo" class="w-20 h-20" />
 
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$21000</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-56 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">84%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-2.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
-
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Donation for COVID-19 in <br />
-              Indonesia
-            </h4>
-
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Donation for COVID-19 in Indonesia by <br />
-              donating sincerely, regardless of the...
-            </p>
-
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$24000</span
-                >
-              </h6>
-
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$19000</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-52 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">80%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-3.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
-
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Help homeless cat to find <br />
-              home
-            </h4>
-
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Help homeless cat and the oether <br />
-              animals by donating sincerely regar...
-            </p>
-
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$15000</span
-                >
-              </h6>
-
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$13000</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-60 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">86%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-4.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
-
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Help save poor children in <br />
-              Pakistan
-            </h4>
-
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Help save poor children in Pakistas by <br />
-              donating sincerely, regardless of the...
-            </p>
-
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$75000</span
-                >
-              </h6>
-
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$50000</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-48 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">66%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-5.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
-
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Lifeskills for children in <br />
-              South Africa
-            </h4>
-
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Donating for children in South Africa <br />
-              by donating sincerely, regardless of...
-            </p>
-
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$45000</span
-                >
-              </h6>
-
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$22500</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-36 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">50%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-
-          <div class="px-6 py-6 w-full border-2 border-gray-200 rounded-3xl">
-            <img
-              src="assets/image/donation-6.png"
-              alt="Image"
-              class="mb-6 hover:opacity-75 transition ease-in-out duration-500"
-            />
-
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6">
-              Help donate for children <br />
-              with cancer
-            </h4>
-
-            <p
-              class="font-light text-gray-400 text-sm md:text-md lg:text-lg mb-10"
-            >
-              Help donate for the children with <br />
-              cancer by donating sincerely, regar...
-            </p>
-
-            <div class="flex items-center justify-between mb-8">
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Goals :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$50000</span
-                >
-              </h6>
-
-              <h6 class="font-light text-gray-400 text-sm md:text-lg">
-                Raised :
-                <span class="font-semibold text-gray-900 text-md md:text-lg"
-                  >$13000</span
-                >
-              </h6>
-            </div>
-
-            <div
-              class="hidden md:block lg:flex items-center justify-between mb-8"
-            >
-              <div>
-                <div
-                  class="w-72 h-2 bg-info opacity-10 rounded-lg absolute"
-                ></div>
-
-                <div class="w-20 h-2 bg-info rounded-lg relative"></div>
-              </div>
-
-              <p class="font-light text-gray-900 text-md">26%</p>
-            </div>
-
-            <button
-              class="w-full py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-800 transition ease-in-out duration-500"
-            >
-              Donate
-            </button>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center">
-          <button
-            class="px-7 py-5 font-semibold bg-gray-100 text-gray-900 rounded-2xl hover:bg-gray-300 hover:text-gray-600 transition ease-in-out duration-500"
-          >
-            More to donate
+          <button class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-dodger-blue text-dodger-blue rounded-md hover-scale" @click="navbarOpen = !navbarOpen">
+            <i data-feather="menu"></i>
           </button>
         </div>
-      </div>
-      <!-- container.// -->
-    </section>
-    <!-- donation section //end -->
 
-    <!-- feature section -->
-    <section class="bg-white py-16">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <div class="flex flex-col lg:flex-row justify-between space-x-16">
+        <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+          <li class="font-semibold text-gray-900 hover:text-dodger-blue transition ease-in-out duration-300 mb-5 lg:mb-0">
+            <a href="#home" data-translate="nav_home">Home</a>
+          </li>
+          <li class="font-semibold text-gray-900 hover:text-dodger-blue transition ease-in-out duration-300 mb-5 lg:mb-0">
+            <a href="#about" data-translate="nav_about">About us</a>
+          </li>
+          <li class="font-semibold text-gray-900 hover:text-dodger-blue transition ease-in-out duration-300 mb-5 lg:mb-0">
+            <a href="#mission" data-translate="nav_mission">Mission</a>
+          </li>
+          <li class="font-semibold text-gray-900 hover:text-dodger-blue transition ease-in-out duration-300 mb-5 lg:mb-0">
+            <a href="#objectives" data-translate="nav_objectives">Objectives</a>
+          </li>
+        </ul>
+
+        <div class="lg:flex flex-col md:flex-row md:items-center text-center md:space-x-6" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+          <a href="https://wa.me/25769467870" target="_blank" class="px-6 py-4 bg-dodger-blue text-white font-semibold text-lg rounded-xl hover:bg-jelly-bean hover-scale transition ease-in-out duration-500 mb-5 md:mb-0">
+            <span data-translate="join">Join</span>
+          </a>
+
+          <div class="relative inline-block text-left" x-data="{ open: false }">
+            <button @click="open = !open" class="px-6 py-4 border-2 border-dodger-blue text-dodger-blue font-semibold text-lg rounded-xl hover:bg-dodger-blue hover:text-white hover-scale transition ease-linear duration-500 flex items-center">
+              <i data-feather="globe" class="inline w-4 h-4 mr-2"></i>
+              <span data-translate="language">Language</span>
+              <i data-feather="chevron-down" class="ml-2 w-4 h-4"></i>
+            </button>
+
+            <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+              <div class="py-1">
+                <button onclick="changeLanguage('en')" class="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 flex items-center">
+                  <span class="text-xl mr-3">🇺🇸</span>
+                  <span>English</span>
+                </button>
+                <button onclick="changeLanguage('fr')" class="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 flex items-center">
+                  <span class="text-xl mr-3">🇫🇷</span>
+                  <span>Français</span>
+                </button>
+                <button onclick="changeLanguage('rn')" class="w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100 flex items-center">
+                  <span class="text-xl mr-3">🇧🇮</span>
+                  <span>Kirundi</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="home" class="flex flex-col lg:flex-row justify-between space-x-20">
+        <div class="text-center lg:text-left mt-32 animate-on-scroll">
+          <h1 class="font-semibold text-gray-900 text-3xl md:text-6xl leading-normal mb-6 text-gradient">
+            <span data-translate="hero_title">Children's Life <br />Matters</span>
+          </h1>
+
+          <p class="font-light text-gray-400 text-md md:text-lg leading-normal mb-12">
+            <span data-translate="hero_description">We are dedicated to improving the lives of vulnerable <br />children through education, protection, and care</span>
+          </p>
+
+          <a href="https://wa.me/25769467870" target="_blank" class="inline-block px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-jelly-bean hover-scale transition ease-in-out duration-500">
+            <span data-translate="get_started">Get started</span>
+          </a>
+        </div>
+
+        <div class="mt-24 animate-on-scroll">
+          <img src="./assets/image/home-img.png" alt="Children illustration" class="floating" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="bg-white py-16 md:mt-10">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <p class="font-light text-gray-500 text-lg md:text-xl text-center uppercase mb-6 animate-on-scroll">
+        <span data-translate="about_us">About Us</span>
+      </p>
+
+      <h1 class="font-semibold text-gray-900 text-xl md:text-4xl text-center leading-normal mb-10 animate-on-scroll">
+        <span data-translate="about_title">We believe we can make a difference <br />in children's lives</span>
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+        <div class="text-center hover-scale animate-on-scroll">
+          <div class="flex justify-center mb-6">
+            <div class="w-20 py-6 flex justify-center bg-dodger-blue bg-opacity-30 text-dodger-blue rounded-xl">
+              <i data-feather="book"></i>
+            </div>
+          </div>
+
+          <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
+            <span data-translate="education">Education</span>
+          </h4>
+
+          <p class="font-light text-gray-500 text-md md:text-xl mb-6">
+            <span data-translate="education_desc">We provide access to quality education for every child regardless of background</span>
+          </p>
+
+          <div class="flex justify-center">
+            <a href="https://wa.me/25769467870" target="_blank" class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500">
+              <span data-translate="learn_more">Learn more</span>
+              <i data-feather="chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center hover-scale animate-on-scroll">
+          <div class="flex justify-center mb-6">
+            <div class="w-20 py-6 flex justify-center bg-dodger-blue bg-opacity-30 text-dodger-blue rounded-xl">
+              <i data-feather="users"></i>
+            </div>
+          </div>
+
+          <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
+            <span data-translate="inclusion">Inclusion</span>
+          </h4>
+
+          <p class="font-light text-gray-500 text-md md:text-xl mb-6">
+            <span data-translate="inclusion_desc">We promote social inclusion and create opportunities for all children</span>
+          </p>
+
+          <div class="flex justify-center">
+            <a href="https://wa.me/25769467870" target="_blank" class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500">
+              <span data-translate="learn_more">Learn more</span>
+              <i data-feather="chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center hover-scale animate-on-scroll">
+          <div class="flex justify-center mb-6">
+            <div class="w-20 py-6 flex justify-center bg-dodger-blue bg-opacity-30 text-dodger-blue rounded-xl">
+              <i data-feather="heart"></i>
+            </div>
+          </div>
+
+          <h4 class="font-semibold text-lg md:text-2xl text-gray-900 mb-6">
+            <span data-translate="wellbeing">Well-being</span>
+          </h4>
+
+          <p class="font-light text-gray-500 text-md md:text-xl mb-6">
+            <span data-translate="wellbeing_desc">We provide psychosocial support and ensure physical health for all children</span>
+          </p>
+
+          <div class="flex justify-center">
+            <a href="https://wa.me/25769467870" target="_blank" class="flex items-center gap-5 px-6 py-4 font-semibold text-info text-lg rounded-xl hover:bg-info hover:text-white transition ease-linear duration-500">
+              <span data-translate="learn_more">Learn more</span>
+              <i data-feather="chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission section -->
+  <section id="mission" class="bg-gray-50 py-16">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <h1 class="font-semibold text-gray-900 text-xl md:text-4xl text-center mb-16 animate-on-scroll">
+        <span data-translate="vision_mission">Our Vision & Mission</span>
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div class="px-6 py-6 w-full bg-white border-2 border-gray-200 rounded-3xl hover-scale animate-on-scroll shadow-lg hover:shadow-xl transition duration-300">
+          <div class="flex justify-center mb-6">
+            <div class="w-20 py-6 flex justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+              <i data-feather="eye"></i>
+            </div>
+          </div>
+
+          <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6 text-center">
+            <span data-translate="our_vision">Our Vision</span>
+          </h4>
+
+          <p class="font-light text-gray-500 text-md md:text-lg mb-10 text-center">
+            <span data-translate="vision_text">"A future where every child, regardless of their background, has access to quality education, opportunities for social inclusion, and a nurturing environment to grow, flourish, and succeed."</span>
+          </p>
+        </div>
+
+        <div class="px-6 py-6 w-full bg-white border-2 border-gray-200 rounded-3xl hover-scale animate-on-scroll shadow-lg hover:shadow-xl transition duration-300">
+          <div class="flex justify-center mb-6">
+            <div class="w-20 py-6 flex justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+              <i data-feather="target"></i>
+            </div>
+          </div>
+
+          <h4 class="font-semibold text-gray-900 text-lg md:text-2xl mb-6 text-center">
+            <span data-translate="our_mission">Our Mission</span>
+          </h4>
+
+          <p class="font-light text-gray-500 text-md md:text-lg mb-10 text-center">
+            <span data-translate="mission_text">"To provide vulnerable children with support through education, social inclusion, psychosocial well-being, and health, in order to give them the necessary tools to build a better future. We are committed to working with love, dignity, and respect for each child, fostering development opportunities through targeted programs and a nurturing environment."</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectives section -->
+  <section id="objectives" class="bg-white py-16">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between space-x-0 lg:space-x-16">
+        <div class="flex justify-center lg:justify-start animate-on-scroll">
+          <img src="./assets/image/feature-img.png" class="w-full floating" alt="Children in school" />
+        </div>
+
+        <div class="mt-16 animate-on-scroll">
+          <h1 class="font-semibold text-gray-900 text-xl md:text-4xl mb-10">
+            <span data-translate="our_objectives">Our Objectives</span>
+          </h1>
+          
+          <div class="grid grid-cols-1 mb-8 space-y-6">
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="book"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_education">Ensure access to education</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="users"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_inclusion">Promote social inclusion</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="smile"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_psychosocial">Provide psychosocial and emotional support</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="heart"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_health">Guarantee physical well-being and health of children</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="home"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_community">Strengthen community partnerships</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="user-check"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_mentoring">Offer mentoring and personal development opportunities</span>
+              </h3>
+            </div>
+            
+            <div class="flex items-center gap-4 hover-scale">
+              <div class="w-12 h-12 flex items-center justify-center bg-dodger-blue bg-opacity-5 text-dodger-blue rounded-xl">
+                <i data-feather="award"></i>
+              </div>
+              <h3 class="font-semibold text-gray-900 text-lg">
+                <span data-translate="obj_empowerment">Support family and community empowerment</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics section -->
+  <section class="gradient-bg py-16">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+        <div class="animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
+            <i data-feather="users" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-2 animate-pulse-slow">500+</h3>
+          <p data-translate="children_helped">Children Helped</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
+            <i data-feather="book" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-2 animate-pulse-slow">50+</h3>
+          <p data-translate="programs_active">Active Programs</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
+            <i data-feather="heart" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-2 animate-pulse-slow">100+</h3>
+          <p data-translate="volunteers">Volunteers</p>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-white bg-opacity-20 rounded-full">
+            <i data-feather="award" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-2 animate-pulse-slow">5+</h3>
+          <p data-translate="years_experience">Years of Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join volunteers section - New Design -->
+  <section class="py-16">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <div class="volunteer-section rounded-3xl md:px-12 px-3 py-12  text-white animate-on-scroll">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" data-translate="volunteer_title">Join Our Volunteer Team</h2>
+          <p class="text-xl mb-8" data-translate="volunteer_description">Make a difference in children's lives by joining our dedicated team of volunteers. Your time and skills can help transform futures.</p>
+          
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://wa.me/25769467870" target="_blank" class="px-8 py-4 bg-dodger-blue text-white font-semibold rounded-xl hover:bg-jelly-bean transition duration-300 hover-scale">
+              <i data-feather="message-circle" class="inline mr-2"></i>
+              <span data-translate="contact_us">Contact Us</span>
+            </a>
+            
+            <a href="#about" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-dodger-blue transition duration-300 hover-scale">
+              <i data-feather="info" class="inline mr-2"></i>
+              <span data-translate="learn_more">Learn More</span>
+            </a>
+          </div>
+          
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white bg-opacity-10 md:p-6 p-2 rounded-xl  backdrop-blur-sm">
+              <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-dodger-blue rounded-full">
+                <i data-feather="clock" class="w-8 h-8"></i>
+              </div>
+              <h4 class="font-bold text-xl mb-2" data-translate="flexible_hours">Flexible Hours</h4>
+              <p data-translate="flexible_desc">Volunteer according to your schedule and availability</p>
+            </div>
+            
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-dodger-blue rounded-full">
+                <i data-feather="award" class="w-8 h-8"></i>
+              </div>
+              <h4 class="font-bold text-xl mb-2" data-translate="training">Training</h4>
+              <p data-translate="training_desc">Receive proper training and guidance for your role</p>
+            </div>
+            
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
+              <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-dodger-blue rounded-full">
+                <i data-feather="users" class="w-8 h-8"></i>
+              </div>
+              <h4 class="font-bold text-xl mb-2" data-translate="community">Community</h4>
+              <p data-translate="community_desc">Join a supportive network of like-minded individuals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container w-screen-full mx-auto px-4">
+      <div class="flex flex-col lg:flex-row lg:justify-between">
+        <div class="space-y-7 mb-10 lg:mb-0">
           <div class="flex justify-center lg:justify-start">
-            <img src="assets/image/feature-img.png" alt="Image" />
+            <img src="./assets/image/logo.png" alt="BAHO NANJE MBEHO Logo" class="w-20 h-20 " />
           </div>
 
-          <div class="mt-16">
-            <h1 class="font-semibold text-gray-900 text-xl md:text-4xl mb-20">
-              You can help lots of people by <br />
-              donating
-            </h1>
+         <p class="font-light text-gray-300 text-lg max-w-md text-center lg:text-left">
+            <span data-translate="footer_description">BAHO NANJE MBEHO is dedicated to improving the lives of vulnerable children through education, inclusion, and comprehensive care.</span>
+          </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-20 mb-16">
-              <div class="mb-5 md:mb-0">
-                <div
-                  class="w-20 py-6 flex justify-center bg-info bg-opacity-5 rounded-xl mb-4"
-                >
-                  <i data-feather="sun" class="text-info"></i>
-                </div>
+          <div class="flex items-center justify-center lg:justify-start space-x-5">
+            <a href="#" class="px-3 py-3 bg-gray-700 text-white rounded-lg hover:bg-dodger-blue hover-scale transition ease-in-out duration-500">
+              <i data-feather="facebook"></i>
+            </a>
 
-                <h3
-                  class="font-semibold text-gray-900 text-xl md:text-3xl mb-4"
-                >
-                  10000+
-                </h3>
+            <a href="#" class="px-3 py-3 bg-gray-700 text-white rounded-lg hover:bg-dodger-blue hover-scale transition ease-in-out duration-500">
+              <i data-feather="twitter"></i>
+            </a>
 
-                <p class="font-light text-gray-400 text-md md:text-lg">
-                  Fundraising campaign in <br />
-                  all time
-                </p>
-              </div>
+            <a href="#" class="px-3 py-3 bg-gray-700 text-white rounded-lg hover:bg-dodger-blue hover-scale transition ease-in-out duration-500">
+              <i data-feather="linkedin"></i>
+            </a>
+          </div>
+        </div>
 
-              <div>
-                <div
-                  class="w-20 py-6 flex justify-center bg-red-500 bg-opacity-5 rounded-xl mb-4"
-                >
-                  <i data-feather="award" class="text-red-500"></i>
-                </div>
+        <div class="space-y-7 mb-10 lg:mb-0">
+          <h4 class="font-semibold text-gray-100 text-lg">
+            <span data-translate="quick_links">Quick Links</span>
+          </h4>
 
-                <h3
-                  class="font-semibold text-gray-900 text-xl md:text-3xl mb-4"
-                >
-                  $120M+
-                </h3>
+          <div class="space-y-3">
+            <a href="#home" class="block font-light text-gray-300 text-lg hover:text-white transition ease-in-out duration-300">
+              <span data-translate="nav_home">Home</span>
+            </a>
+            <a href="#about" class="block font-light text-gray-300 text-lg hover:text-white transition ease-in-out duration-300">
+              <span data-translate="nav_about">About us</span>
+            </a>
+            <a href="#mission" class="block font-light text-gray-300 text-lg hover:text-white transition ease-in-out duration-300">
+              <span data-translate="nav_mission">Mission</span>
+            </a>
+            <a href="#objectives" class="block font-light text-gray-300 text-lg hover:text-white transition ease-in-out duration-300">
+              <span data-translate="nav_objectives">Objectives</span>
+            </a>
+          </div>
+        </div>
 
-                <p class="font-light text-gray-400 text-md md:text-lg">
-                  Raised and counting <br />
-                  donations in all time
-                </p>
-              </div>
+        <div class="space-y-7">
+          <h4 class="font-semibold text-gray-100 text-lg">
+            <span data-translate="contact_us">Contact Us</span>
+          </h4>
+
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <i data-feather="phone" class="w-5 h-5 text-dodger-blue"></i>
+              <span class="font-light text-gray-300 text-lg">+257 69 46 78 70</span>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-20">
-              <div class="mb-5 md:mb-0">
-                <div
-                  class="w-20 py-6 flex justify-center bg-yellow-500 bg-opacity-5 rounded-xl mb-4"
-                >
-                  <i data-feather="users" class="text-yellow-500"></i>
-                </div>
-
-                <h3
-                  class="font-semibold text-gray-900 text-xl md:text-3xl mb-4"
-                >
-                  1200+
-                </h3>
-
-                <p class="font-light text-gray-400 text-md md:text-lg">
-                  Our volunteer around the <br />
-                  world
-                </p>
-              </div>
-
-              <div>
-                <div
-                  class="w-20 py-6 flex justify-center bg-green-500 bg-opacity-5 rounded-xl mb-4"
-                >
-                  <i data-feather="trending-up" class="text-green-500"></i>
-                </div>
-
-                <h3
-                  class="font-semibold text-gray-900 text-xl md:text-3xl mb-4"
-                >
-                  98%
-                </h3>
-
-                <p class="font-light text-gray-400 text-md md:text-lg">
-                  Positive review from <br />
-                  public
-                </p>
-              </div>
+            
+            <div class="flex items-center space-x-3">
+              <i data-feather="mail" class="w-5 h-5 text-dodger-blue"></i>
+              <span class="font-light text-gray-300 text-lg">info@bahonanjembeho.org</span>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+              <i data-feather="map-pin" class="w-5 h-5 text-dodger-blue"></i>
+              <span class="font-light text-gray-300 text-lg">
+                <span data-translate="address">Bujumbura, Burundi</span>
+              </span>
             </div>
           </div>
         </div>
       </div>
-      <!-- container.// -->
-    </section>
-    <!-- feature section //end -->
 
-    <!-- join volunters section -->
-    <section class="bg-white py-16">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <div
-          class="w-full h-full bg-blue-500 rounded-2xl md:rounded-3xl relative lg:flex items-center"
-        >
-          <div class="hidden lg:block">
-            <img
-              src="assets/image/humans.png"
-              alt="Image"
-              class="relative z-10"
-            />
+      <hr class="text-gray-600 mt-10" />
 
-            <img
-              src="assets/image/pattern-2.png"
-              alt="Image"
-              class="absolute top-14 left-40"
-            />
+     <div class="flex gap-10 justify-content-center bg-danger w-full align-content-center text-center">
+       <p class="font-light text-gray-300 text-lg text-center mt-10">
+        <span data-translate="copyright">Copyright © 2024 BAHO NANJE MBEHO. All rights reserved.</span>
+      </p>
+      <p class="font-light text-gray-300 text-lg text-center mt-10">
+        <span><span data-translate="developed_by">Developed by</span> <a href="https://www.microgels.com" target="_blank" class="text-dodger-blue hover:underline">Microgels</a>.</span>
+      </p>
+     </div>
+    </div>
+  </footer>
 
-            <img
-              src="assets/image/pattern.png"
-              alt="Image"
-              class="absolute top-0 z-0"
-            />
-          </div>
 
-          <div class="lg:relative py-4 lg:py-0">
-            <h1
-              class="font-semibold text-white text-xl md:text-4xl text-center lg:text-left leading-normal md:mb-5 lg:mb-10"
-            >
-              Interested in volunteering? Join <br />
-              with us now
-            </h1>
+  <!-- Scripts -->
+  <script>
+    // Initialize feather icons
+    feather.replace();
 
-            <div
-              class="hidden md:block flex items-center text-center lg:text-left space-x-5"
-            >
-              <input
-                type="text"
-                placeholder="Email"
-                class="px-4 py-4 w-96 bg-gray-50 placeholder-gray-400 rounded-xl outline-none"
-              />
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 
-              <button
-                class="px-6 py-4 font-semibold bg-gray-50 text-info text-lg rounded-xl hover:bg-blue-500 hover:text-white transition ease-in-out duration-500"
-              >
-                Join
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- container.// -->
-    </section>
-    <!-- join volunters section //end -->
+    // Animate elements on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-    <footer class="bg-white py-16">
-      <div class="container max-w-screen-xl mx-auto px-4">
-        <div class="flex flex-col lg:flex-row lg:justify-between">
-          <div class="space-y-7 mb-10 lg:mb-0">
-            <div class="flex justify-center lg:justify-start">
-              <img src="assets/image/footer-logo.png" alt="Image" />
-            </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
 
-            <p
-              class="font-light text-gray-400 text-md md:text-lg text-center lg:text-left"
-            >
-              Donate and help others people <br />
-              around the world
-            </p>
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
 
-            <div
-              class="flex items-center justify-center lg:justify-start space-x-5"
-            >
-              <a
-                href="#"
-                class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-              >
-                <i data-feather="facebook"></i>
-              </a>
+    // Language modal functions
+    function openLanguageModal() {
+      document.getElementById('languageModal').classList.remove('hidden');
+    }
 
-              <a
-                href="#"
-                class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-              >
-                <i data-feather="twitter"></i>
-              </a>
+    function closeLanguageModal() {
+      document.getElementById('languageModal').classList.add('hidden');
+    }
 
-              <a
-                href="#"
-                class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-info hover:text-white transition ease-in-out duration-500"
-              >
-                <i data-feather="linkedin"></i>
-              </a>
-            </div>
-          </div>
+    // Language translations
+    const translations = {
+      en: {
+        select_language: "Select Language",
+        close: "Close",
+        nav_home: "Home",
+        nav_about: "About us",
+        nav_mission: "Mission",
+        nav_objectives: "Objectives",
+        join: "Join",
+        language: "Language",
+        hero_title: "Children's Life <br />Matters",
+        hero_description: "We are dedicated to improving the lives of vulnerable <br />children through education, protection, and care",
+        get_started: "Get started",
+        about_us: "About Us",
+        about_title: "We believe we can make a difference <br />in children's lives",
+        education: "Education",
+        education_desc: "We provide access to quality education for every child regardless of background",
+        inclusion: "Inclusion",
+        inclusion_desc: "We promote social inclusion and create opportunities for all children",
+        wellbeing: "Well-being",
+        wellbeing_desc: "We provide psychosocial support and ensure physical health for all children",
+        learn_more: "Learn more",
+        vision_mission: "Our Vision & Mission",
+        our_vision: "Our Vision",
+        vision_text: "\"A future where every child, regardless of their background, has access to quality education, opportunities for social inclusion, and a nurturing environment to grow, flourish, and succeed.\"",
+        our_mission: "Our Mission",
+        mission_text: "\"To provide vulnerable children with support through education, social inclusion, psychosocial well-being, and health, in order to give them the necessary tools to build a better future. We are committed to working with love, dignity, and respect for each child, fostering development opportunities through targeted programs and a nurturing environment.\"",
+        our_objectives: "Our Objectives",
+        obj_education: "Ensure access to education",
+        obj_inclusion: "Promote social inclusion",
+        obj_psychosocial: "Provide psychosocial and emotional support",
+        obj_health: "Guarantee physical well-being and health of children",
+        obj_community: "Strengthen community partnerships",
+        obj_mentoring: "Offer mentoring and personal development opportunities",
+        obj_empowerment: "Support family and community empowerment",
+        children_helped: "Children Helped",
+        programs_active: "Active Programs",
+        volunteers: "Volunteers",
+        years_experience: "Years of Experience",
+        volunteer_title: "Interested in volunteering? Join <br />with us now",
+        contact_us: "Contact Us",
+        footer_description: "BAHO NANJE MBEHO is dedicated to improving the lives of vulnerable children through education, inclusion, and comprehensive care.",
+        quick_links: "Quick Links",
+        address: "Bujumbura, Burundi",
+        copyright: "Copyright © 2024 BAHO NANJE MBEHO. All rights reserved."
+      },
+      fr: {
+        select_language: "Choisir la langue",
+        close: "Fermer",
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_mission: "Mission",
+        nav_objectives: "Objectifs",
+        join: "Rejoindre",
+        language: "Langue",
+        hero_title: "La Vie des Enfants <br />Compte",
+        hero_description: "Nous sommes dédiés à améliorer la vie des enfants <br />vulnérables par l'éducation, la protection et les soins",
+        get_started: "Commencer",
+        about_us: "À Propos de Nous",
+        about_title: "Nous croyons pouvoir faire une différence <br />dans la vie des enfants",
+        education: "Éducation",
+        education_desc: "Nous fournissons un accès à une éducation de qualité pour chaque enfant, peu importe son origine",
+        inclusion: "Inclusion",
+        inclusion_desc: "Nous promouvons l'inclusion sociale et créons des opportunités pour tous les enfants",
+        wellbeing: "Bien-être",
+        wellbeing_desc: "Nous fournissons un soutien psychosocial et assurons la santé physique de tous les enfants",
+        learn_more: "En savoir plus",
+        vision_mission: "Notre Vision et Mission",
+        our_vision: "Notre Vision",
+        vision_text: "\"Un avenir où chaque enfant, peu importe son origine, a accès à une éducation de qualité, des opportunités d'inclusion sociale, et un environnement bienveillant pour grandir, s'épanouir et réussir.\"",
+        our_mission: "Notre Mission",
+        mission_text: "\"Fournir aux enfants vulnérables un soutien par l'éducation, l'inclusion sociale, le bien-être psychosocial et la santé, afin de leur donner les outils nécessaires pour construire un avenir meilleur. Nous nous engageons à travailler avec amour, dignité et respect pour chaque enfant, favorisant les opportunités de développement par des programmes ciblés et un environnement bienveillant.\"",
+        our_objectives: "Nos Objectifs",
+        obj_education: "Assurer l'accès à l'éducation",
+        obj_inclusion: "Promouvoir l'inclusion sociale",
+        obj_psychosocial: "Fournir un soutien psychosocial et émotionnel",
+        obj_health: "Garantir le bien-être physique et la santé des enfants",
+        obj_community: "Renforcer les partenariats communautaires",
+        obj_mentoring: "Offrir du mentorat et des opportunités de développement personnel",
+        obj_empowerment: "Soutenir l'autonomisation des familles et des communautés",
+        children_helped: "Enfants Aidés",
+        programs_active: "Programmes Actifs",
+        volunteers: "Bénévoles",
+        years_experience: "Années d'Expérience",
+        volunteer_title: "Intéressé à faire du bénévolat? Rejoignez-nous <br />maintenant",
+        contact_us: "Nous Contacter",
+        footer_description: "BAHO NANJE MBEHO se consacre à l'amélioration de la vie des enfants vulnérables par l'éducation, l'inclusion et les soins complets.",
+        quick_links: "Liens Rapides",
+        address: "Bujumbura, Burundi",
+        copyright: "Copyright © 2024 BAHO NANJE MBEHO. Tous droits réservés."
+      },
+      rn: {
+        select_language: "Hitamo Ururimi",
+        close: "Funga",
+        nav_home: "Itangiriro",
+        nav_about: "Uko dusanzwe",
+        nav_mission: "Intego",
+        nav_objectives: "Intego z'ingenzi",
+        join: "Kwinjira",
+        language: "Ururimi",
+        hero_title: "Ubuzima bw'Abana <br />Bukomeye",
+        hero_description: "Twiteguye guteza imbere ubuzima bw'abana <br />bafite ibibazo binyuze mu burezi, ubwisanzure n'ubwitabire",
+        get_started: "Tangira",
+        about_us: "Uko Dusanzwe",
+        about_title: "Twizera ko dushobora guhindura <br />ubuzima bw'abana",
+        education: "Uburezi",
+        education_desc: "Dutanga uburere bwiza ku bana bose hatitawe ku nkomoko yabo",
+        inclusion: "Ubwisanzure",
+        inclusion_desc: "Dushigikira ubwisanzure mu buzima bw'abana bose",
+        wellbeing: "Ubuzima bwiza",
+        wellbeing_desc: "Dutanga ubufasha mu bwenge n'ubuzima bwiza bw'abana bose",
+        learn_more: "Menya byinshi",
+        vision_mission: "Icyerekezo n'Intego yacu",
+        our_vision: "Icyerekezo cyacu",
+        vision_text: "\"Ejo hazaza aho buri mwana, hatitawe ku nkomoko ye, azabona uburezi bwiza, amahirwe yo kwishora mu buzima rusange, n'ibidukikije byiza byo gukurira, gutera imbere no gutsinda.\"",
+        our_mission: "Intego yacu",
+        mission_text: "\"Guha abana bafite ibibazo ubufasha binyuze mu burezi, ubwisanzure mu buzima, ubuzima bw'ubwenge, n'ubuzima rusange, kugira ngo tubehe ibikoresho bikenewe byo kubaka ejo hazaza heza. Twiyemeje gukora n'urukundo, icyubahiro n'ubwubahane kuri buri mwana, tushigikira amahirwe y'iterambere binyuze mu bikorwa byihariye n'ibidukikije byiza.\"",
+        our_objectives: "Intego zacu z'ingenzi",
+        obj_education: "Kwemeza ubona uburezi",
+        obj_inclusion: "Guteza imbere ubwisanzure mu buzima",
+        obj_psychosocial: "Gutanga ubufasha mu bwenge n'amarangamutima",
+        obj_health: "Kwemeza ubuzima bwiza n'ubuzima bw'umubiri bw'abana",
+        obj_community: "Gushimangira ubufatanye n'abaturage",
+        obj_mentoring: "Gutanga inyigisho n'amahirwe y'iterambere ry'umuntu ku giti cye",
+        obj_empowerment: "Gushigikira gushimangira ingo n'abaturage",
+        children_helped: "Abana Bafashijwe",
+        programs_active: "Gahunda Zikora",
+        volunteers: "Abashakashamuka",
+        years_experience: "Imyaka y'Ubunyangamugayo",
+        volunteer_title: "Urifuza gushakashamuka? Winjire <br />nawe ubu",
+        contact_us: "Duhamagare",
+        footer_description: "BAHO NANJE MBEHO yiteguye guteza imbere ubuzima bw'abana bafite ibibazo binyuze mu burezi, ubwisanzure n'ubwitabire busesuye.",
+        quick_links: "Ihuza Ryihuse",
+        address: "Bujumbura, Uburundi",
+        copyright: "Copyright © 2024 BAHO NANJE MBEHO. Uburenganzira bwose burarinzwe."
+      }
+    };
 
-          <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">
-              Quick links
-            </h4>
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Charity Ratings</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Top-Rated Charities</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Top Compensation</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >High Asset Charities</a
-            >
-          </div>
-
-          <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">
-              Company
-            </h4>
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >About Us</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Journalists / Media</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Membership</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Blog</a
-            >
-          </div>
-
-          <div class="text-center lg:text-left space-y-7 mb-10 lg:mb-0">
-            <h4 class="font-semibold text-gray-900 text-lg md:text-2xl">
-              Legal
-            </h4>
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >FAQ</a
-            >
-
-            <a
-              href="#"
-              class="block font-light text-gray-400 text-sm md:text-lg hover:text-gray-800 transition ease-in-out duration-300"
-              >Terms & Conditions</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- container.// -->
-    </footer>
-
-    <script>
+    // Change language function
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-translate]');
+      elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          element.innerHTML = translations[lang][key];
+        }
+      });
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang === 'rn' ? 'rn' : (lang === 'fr' ? 'fr' : 'en');
+      
+      // Store selected language
+      localStorage.setItem('selectedLanguage', lang);
+      
+      // Close modal
+      closeLanguageModal();
+      
+      // Re-initialize feather icons after content change
       feather.replace();
-    </script>
-  </body>
+    }
+
+    // Load saved language on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+      if (savedLang !== 'en') {
+        changeLanguage(savedLang);
+      }
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('languageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLanguageModal();
+      }
+    });
+  </script>
+</body>
 </html>
